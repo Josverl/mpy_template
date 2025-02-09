@@ -7,10 +7,17 @@
         //     "event": "onFileChange"
         // },		
         {
+            "event": "onFileChange",
             "match": "src\\\\.*\\.py",
             "isAsync": true,
-            "cmd": "mpy-cross \"${file}\" -o \"${workspaceRoot}/dist/${fileBasenameNoExt}.mpy\"",
-            "event": "onFileChange"
+            "cmd": "pwsh ${workspaceRoot}\\tools\\mpy-cross_dist.ps1 \"${file}\"",
+        },		
+        {
+            "event": "onFileRename",
+            "match": "src\\\\.*\\.py",
+            "isAsync": true,
+            "cmd": "pwsh ${workspaceRoot}\\tools\\mpy-cross_dist.ps1 \"${file}\"",
+            // "cmd": "bash ${workspaceRoot}\\tools\\mpy-cross_dist.sh \"${file}\"",
         }		
     ],
 }
