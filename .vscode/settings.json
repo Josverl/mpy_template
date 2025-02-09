@@ -1,15 +1,15 @@
 {
     "filewatcher.commands": [
+        // {
+        //     "match": "src\\\\.*\\.py",
+        //     "isAsync": true,
+        //     "cmd": "echo '${file} file content Changed'",
+        //     "event": "onFileChange"
+        // },		
         {
             "match": "src\\\\.*\\.py",
             "isAsync": true,
-            "cmd": "echo '${file} file content Changed'",
-            "event": "onFileChange"
-        },		
-        {
-            "match": "src\\\\.*\\.py",
-            "isAsync": true,
-            "cmd": "mpy-cross ${file} -o ${workspaceRoot}/dist/${fileBasenameNoExt}.mpy",
+            "cmd": "mpy-cross \"${file}\" -o \"${workspaceRoot}/dist/${fileBasenameNoExt}.mpy\"",
             "event": "onFileChange"
         }		
     ],
