@@ -1,3 +1,14 @@
+[project]
+name = "micropython-project"
+version = "0.1.0"
+
+[project.optional-dependencies]
+# install to folder typings
+# uv pip install -r pyproject.toml --extra stubs --target typings 
+stubs = [
+  "micropython-esp32-stubs"
+]
+
 
 # ###################################################################
 # pyright options:

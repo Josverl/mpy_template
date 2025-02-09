@@ -26,11 +26,23 @@ the task runner can be reconfigured to mount the src folder directly if cross-co
 The `pyproject.toml` file includes typing configuration to ensure type checking and type safety throughout the project.
 in order for this to work the type stubs for micropython need to be installed.
 An example of the  necessary stub packages are listed in the `requirements-stubs.txt` file to facilitate the installation process.
-sekect to port you are using in the `requirements-stubs.txt` file,
-and install the stubs with `pip install -U -r requirements-stubs.txt --target typings --no-user `
+Choose port you are using in the `stubs` section of the `pyproject.toml` file,
+and install the stubs into a typings folder using the following command:
+`uv pip install -U -r pyproject.toml --extra stubs --target typings`
 
 ## Tool Dependencies
 The project has the following dependencies that are expected to be installed with pipx or similar package managers:
+
+**Astral's uv** tool: 
+Install us using any of the supported methods:
+- https://docs.astral.sh/uv/getting-started/installation/
+
+
+Use uv to install the following tools: 
+- `uv tool install mpremote` 
+- `uv tool install mpy-cross` 
+
+if you prefer pipx use the following commands: 
 - `pipx install mpremote` 
 - `pipx install mpy-cross` 
 
@@ -40,3 +52,4 @@ The project has the following dependencies that are expected to be installed wit
 2. Install the dependencies
 3. Select the micropython port you want 
 4. Install the typing stubs
+5. 
