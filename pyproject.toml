@@ -1,0 +1,35 @@
+
+# ###################################################################
+# pyright options:
+
+[tool.pyright]
+include = ["src"]
+ignore = ["**/typings"]
+exclude = [".*", "__*", "**/typings"]
+
+typeCheckingMode = "basic"
+stubPath = "typings"
+typeshedPath = "typings"
+pythonPlatform = "Linux"
+
+reportMissingModuleSource = "none"
+reportUnnecessaryTypeIgnoreComment = "error"
+
+# ###################################################################
+# # mypy global options:
+# [tool.mypy]
+# platform = "linux"
+# mypy_path = "typings"
+# # custom-typeshed-dir = "typings"
+# files = "*.py"
+# exclude = [
+#     "typings[\\/].*", # TOML basic string 
+# ]
+
+# follow_imports = "silent"
+# follow_imports_for_stubs = true
+# no_site_packages = true
+# check_untyped_defs = true
+# disable_error_code = ["no-redef", "assignment"]
+
+# ###################################################################
